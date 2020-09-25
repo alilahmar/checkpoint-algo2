@@ -1,0 +1,50 @@
+ ALGORITHM_ARRAY
+  VAR
+ Set1 : INTEGER;
+ Set2 : INTEGER;
+ Sum : INTEGER := 0;
+ i : INTEGER;
+ j : INTEGER;
+
+BEGIN
+ read(Set1)
+ read(Set2)
+ For i From 0 To Set1.length-1 STEP 1 Do 
+ for j From 0 To Set2.length-1 STEP 1 Do
+
+IF (Set1[i] <> Set2[j]) THEN
+
+ Sum:= Sum + Set1[i] + Set2[j]
+ELSE 
+ Sum:= 0
+END_IF
+END_FOR
+ write (Sum);
+END
+
+
+
+
+
+ ALGORITHM_HASHTABLE 
+VAR
+ Set1 : INTEGER;
+ Set2 : INTEGER;
+ Sum : INTEGER := 0;
+ HASHTAB : HASH_TABLEINTEGER;
+ i,j : INTEGER;
+
+BEGIN
+ read(Set1)
+ read(Set2)
+ For i From 0 To Set1.length-1 STEP 1 Do 
+ For j From 0 To Set2.length-1 STEP 1 Do 
+IF (HASHTAB.Lookup(Set1[i]) <> HASHTAB.Lookup(Set2[i])) THEN
+
+ Sum:= Sum + HASHTAB.get(Arr1[i] + HASHTAB.get(Arr2[i])
+ELSE 
+ Sum:= 0
+END_IF
+END_FOR
+ write (Sum);
+END
